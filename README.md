@@ -23,21 +23,21 @@ Facade digunakan dalam kasus di mana sistem memiliki banyak subsistem yang kompl
 
 ## 4. Contoh Kode dalam Java
 ```java
-// Subsistem 1
+// CPU
 class CPU {
     void start() {
         System.out.println("CPU started");
     }
 }
 
-// Subsistem 2
+// Memory
 class Memory {
     void load() {
         System.out.println("Memory loaded");
     }
 }
 
-// Subsistem 3
+// HardDrive
 class HardDrive {
     void read() {
         System.out.println("Hard Drive reading data");
@@ -45,12 +45,12 @@ class HardDrive {
 }
 
 // Facade
-class ComputerFacade {
+class Computer {
     private CPU cpu;
     private Memory memory;
     private HardDrive hardDrive;
     
-    public ComputerFacade() {
+    public Computer() {
         this.cpu = new CPU();
         this.memory = new Memory();
         this.hardDrive = new HardDrive();
@@ -67,7 +67,7 @@ class ComputerFacade {
 // Main Class
 public class Main {
     public static void main(String[] args) {
-        ComputerFacade computer = new ComputerFacade();
+        Computer computer = new Computer();
         computer.startComputer();
     }
 }

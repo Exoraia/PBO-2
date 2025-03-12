@@ -5,12 +5,18 @@ Pola Desain Facade adalah pola desain struktural yang menyediakan antarmuka yang
 
 Sumber: https://belatrix.globant.com/us-en/blog/tech-trends/facade-design-pattern/
 
+Facade simplenya adalah gateway sederhana yang menuju ke penggunaan fungsi yang kompleks. Sedangkan Proxy menyediakan interface yang sama dengan kelas yang diproksikan dan biasanya melakukan beberapa hal seperti housekeeping stuff. Jadi dari pada membuat beberapa copy-an dari sebuah heavy object X, kita dapar membuat salinan proxy yang ringan yang pada gilirannya mengelola X dan menerjemahkan panggilan kita sebagaimana diperlukan.
+
+Sumber: https://stackoverflow.com/questions/3489131/difference-between-the-facade-proxy-adapter-and-decorator-design-patterns
+
 ## 2. Kapan Facade Digunakan?
-Facade digunakan dalam kasus di mana sistem memiliki banyak subsistem yang kompleks dan ingin menyederhanakan akses ke fungsionalitas tersebut. Contohnya:
-- Sistem manajemen perbankan
-- Library multimedia (audio/video processing)
-- API eksternal yang kompleks
-- Framework yang memiliki banyak modul
+Pattern Facade digunakan untuk menyederhanakan kompleksitas sistem dengan menyediakan interface yang mudah digunakan, sehingga pengguna tidak perlu berurusan dengan detail implementasi yang rumit di balik interface tersebut. 
+
+Contoh kasus :
+Bayangkan Anda ingin mengontrol berbagai perangkat smart home (TV, AC, lampu, dll). Dengan Facade, Anda cukup berinteraksi dengan Facade untuk menyalakan TV, mengatur AC, dan mematikan lampu, tanpa harus memahami bagaimana setiap perangkat bekerja. 
+Jadi, Cara kerja facade ini dapat disimpulkan bahwa kita dapat mengetahui fungsi kerja suatu fitur tanpa kita harus mengetahui detail dari fitur tersebut
+
+Sumber: https://ferry.vercel.app/blog/contoh-facade-design-pattern#:~:text=Fa%C3%A7ade%20Design%20Pattern%20cocok%20digunakan,juga%20bisa%20menjadi%20God%20Object.
 
 ## 3. Kelebihan dan Kekurangan
 

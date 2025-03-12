@@ -1,7 +1,9 @@
 # Facade Design Pattern
 
 ## 1. Penjelasan
-Facade adalah salah satu design pattern yang menyediakan antarmuka sederhana untuk sekumpulan antarmuka dalam sebuah subsistem. Pattern ini membantu mengurangi kompleksitas dengan menyembunyikan detail implementasi dari klien.
+Pola Desain Facade adalah pola desain struktural yang menyediakan antarmuka yang disederhanakan ke sekumpulan antarmuka dalam subsistem sehingga lebih mudah digunakan. Pola ini melibatkan pembuatan kelas facade yang merepresentasikan antarmuka tingkat tinggi dan terpadu ke sekumpulan antarmuka dalam subsistem. Pola ini menyembunyikan kompleksitas subsistem dan menyediakan antarmuka yang lebih sederhana untuk kode klien.
+
+Sumber: https://belatrix.globant.com/us-en/blog/tech-trends/facade-design-pattern/
 
 ## 2. Kapan Facade Digunakan?
 Facade digunakan dalam kasus di mana sistem memiliki banyak subsistem yang kompleks dan ingin menyederhanakan akses ke fungsionalitas tersebut. Contohnya:
@@ -13,13 +15,26 @@ Facade digunakan dalam kasus di mana sistem memiliki banyak subsistem yang kompl
 ## 3. Kelebihan dan Kekurangan
 
 ### Kelebihan:
-- Menyederhanakan penggunaan sistem yang kompleks
-- Mengurangi dependensi antara klien dan subsistem
-- Mempermudah pemeliharaan dan perluasan sistem
+- Antarmuka yang Disederhanakan:
+Keuntungan utama dari pola Facade adalah penyediaan antarmuka yang disederhanakan bagi klien
+
+- Enkapsulasi Kompleksitas
+Pola Facade merangkum interaksi dan ketergantungan kompleks subsistem dalam satu komponen.
+
+- Peningkatan Kemudahan Pemeliharaan
+Pola Facade meningkatkan kemudahan pemeliharaan kode dengan menyediakan titik terpusat untuk mengelola interaksi dengan subsistem.
 
 ### Kekurangan:
-- Jika terlalu banyak fungsi ditambahkan ke Facade, bisa menyebabkan class menjadi terlalu besar
-- Menambah lapisan tambahan yang bisa meningkatkan overhead jika tidak diimplementasikan dengan benar
+- Fleksibilitas Terbatas
+Salah satu potensi kerugian dari pola Facade adalah dapat membatasi fleksibilitas dalam beberapa kasus. Karena Facade menyediakan antarmuka yang disederhanakan, mungkin tidak akan menampilkan semua fungsi atau opsi penyesuaian yang tersedia di subsistem yang mendasarinya.
+
+- Meningkatnya Ketergantungan pada Façade
+Facade menimbulkan ketergantungan antara klien dan komponen Facade. Klien menjadi sangat terikat dengan Facade, dan setiap perubahan atau pembaruan pada Facade dapat memengaruhi kode klien.
+
+- Ekstensibilitas Terbatas
+Pola Facade mungkin menghadapi keterbatasan saat memperluas sistem dengan subsistem atau fungsi baru. Penambahan subsistem baru mungkin memerlukan modifikasi pada Facade, yang berpotensi memengaruhi kode klien yang ada.
+
+Sumber: https://dotnettutorials.net/lesson/facade-design-pattern-in-java/
 
 ## 4. Contoh Kode dalam Java
 ```java
